@@ -1,6 +1,6 @@
 accounts:
- version: 0.2
- branch: {cipher}22a1a9114787ba7c2459d1f120b0cdc05a4a3105678dd3bb219ee8e871bdb82e
+  version: 0.2
+  branch: {cipher}22a1a9114787ba7c2459d1f120b0cdc05a4a3105678dd3bb219ee8e871bdb82e
       
 spring:
   datasource:
