@@ -1,27 +1,23 @@
-accounts:
+--- 
+accounts: 
+  branch: "{cipher}22a1a9114787ba7c2459d1f120b0cdc05a4a3105678dd3bb219ee8e871bdb82e"
   version: 0.2
-  branch: hyderabad
-spring:
-  datasource:
-    url: jdbc:h2:mem:accounts_db;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL;INIT=CREATE SCHEMA IF NOT EXISTS accounts_db
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-  liquibase:
-    enabled: true
-    change-log: classpath:/db/changelog/db.changelog-dev.yaml
-    contexts: dev
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: true
-server:
+server: 
   port: 8081
-  
-
-
-
-
+spring: 
+  datasource: 
+    driver-class-name: org.h2.Driver
+    password: ~
+    url: "jdbc:h2:mem:accounts_db;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL;INIT=CREATE SCHEMA IF NOT EXISTS accounts_db"
+    username: sa
+  h2: 
+    console: 
+      enabled: true
+      settings: 
+        web-allow-others: true
+  jpa: 
+    database-platform: org.hibernate.dialect.H2Dialect
+  liquibase: 
+    change-log: "classpath:/db/changelog/db.changelog-dev.yaml"
+    contexts: dev
+    enabled: true
