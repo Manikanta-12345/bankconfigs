@@ -1,0 +1,21 @@
+spring:
+   profiles:
+     active: dev
+   datasource:
+     url: jdbc:mysql://localhost:3306/accounts_db
+     username: root
+     password: root@123
+     driver-class-name: com.mysql.jdbc.Driver
+   jpa:
+     database-platform: org.hibernate.dialect.MySQL5Dialect
+     hibernate:
+       ddl-auto: none
+   h2:
+    console:
+      enabled: true
+   liquibase:
+     enabled: true
+     change-log: classpath:/db/changelog/db.changelog-dev.yaml
+     contexts: dev
+server:
+  port: 8081
